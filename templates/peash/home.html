@@ -18,20 +18,9 @@
                     <img src="{{ about.pro_img.url }}">
                 </div>
                 <div class="name">
-                    <p class="name_text">{{ about.name }}</p>
+                    <p class="name_text">peash</p>
                 </div>
-                <div class="contract">
-                    <div class="contract_icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <p class="contract_text">saydulpeash428@gmail.com</p>
-                </div>
-                <div class="contract">
-                    <div class="contract_icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <p class="contract_text">+8801726922753</p>
-                </div>
+                
                 
                 <div class="links">
                     {% for link in links %}
@@ -51,7 +40,7 @@
                         <p>peash</p>
                     </div>
                     <div class="about_text">
-                        <h1>Hello! <br>I am Peash</h1>
+                        <h1>Hello! I am<br><p>{{ about.name }}</p></h1>
                         <p class="description_text">{{ about.short_des }}</p>
                     </div>
                     <div class="image">
@@ -281,13 +270,14 @@
                                 <div class="ach_name">
                                     <p>{{ achievement.name }}</p>
                                 </div>
+                                <div class="ach_year">
+                                    <p>{{ achievement.year }}</p>
+                                </div>
                                 <div class="ach_additionals">
                                     <div class="ach_from">
                                         <p>{{ achievement.ach_from }}</p>
                                     </div>
-                                    <div class="ach_year">
-                                        <p>{{ achievement.year }}</p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -350,36 +340,35 @@
             <div class="cop">&copy; 2024 Saydul Mursalin Peash. All rights reserved.</div>
             
             </div>
-            
+            <div class="menu_items">
+                <ul class="menu-list">
+                    <li class="m"><a href="#home">
+                        Home
+                    </a></li>
+                    <li class="m"><a href="#about_me">
+                        About Me
+                    </a></li>
+                    <li class="m"><a href="#skills">
+                        Technical Skills
+                    </a></li>
+                    <li class="m"><a href="#projects">
+                        Projects
+                    </a></li>
+                    
+                    <li class="m"><a href="#experiences">
+                        Experiences
+                    </a></li>
+                    <li class="m"><a href="#achivements">
+                        Achivements
+                    </a></li>
+                    <li class="m"><a href="#contacts">
+                        Contact
+                    </a></li>
+                    
+                </ul>
+            </div>
             <div class="menu" id="menu">
-                
-                <div class="menu_items">
-                    <ul class="menu-list">
-                        <li class="m"><a href="#home">
-                            Home
-                        </a></li>
-                        <li class="m"><a href="#about_me">
-                            About Me
-                        </a></li>
-                        <li class="m"><a href="#skills">
-                            Technical Skills
-                        </a></li>
-                        <li class="m"><a href="#projects">
-                            Projects
-                        </a></li>
-                        
-                        <li class="m"><a href="#experiences">
-                            Experiences
-                        </a></li>
-                        <li class="m"><a href="#achivements">
-                            Achivements
-                        </a></li>
-                        <li class="m"><a href="#contacts">
-                            Contact
-                        </a></li>
-                        
-                    </ul>
-                </div>
+
                 <div class="menu_icon" id="menu_icon_id">
                     <i class="fa-solid fa-bars"></i>
                 </div>

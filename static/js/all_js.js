@@ -53,12 +53,14 @@
         let bod=this.querySelectorAll('.container')[0];
         menu.addEventListener('click',(e)=>{
             //t=1.5;
+            t=0.2*m.length;
             e.stopPropagation();
             if(act===0){
                 mi.style.transform='translateX(0px)';
-                t=0.2*m.length;
+                
                 mi.style.display='block';
                 menu_item.classList.toggle('active');
+                menu.classList.toggle('active');
                 act=1;
                 for(var i=0;i<m.length;i++){
                     m[i].style.transform='translateX(0px)';
@@ -68,16 +70,17 @@
                 mi.style.transform='translateX(0px)';
                 mi.style.transition='transform '+0.5+'s'
             }else{
-                t=0.2;
+                t=0.1;
                 menu_item.classList.remove("active");
+                menu.classList.remove("active");
                 act=0;
                 for(var i=0;i<m.length;i++){
                     m[i].style.transform='translateX(250px)';
                     m[i].style.transition='transform '+t+'s'
-                    t=t+0.3;
+                    t=t+0.1;
                 }
                 mi.style.transform='translateX(250px)';
-                mi.style.transition='transform '+1.5+'s'
+                mi.style.transition='transform '+t+'s'
             }
         });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -99,6 +102,7 @@
                 if(act===1){
                     t=0.3;
                     menu_item.classList.remove("active");
+                    menu.classList.remove("active");
                     act=0;
                     for(var i=0;i<m.length;i++){
                         m[i].style.transform='translateX(250px)';
