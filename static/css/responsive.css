@@ -36,6 +36,9 @@
         background-image: linear-gradient(to bottom, #0303038c, transparent);
 
     }
+    .menu_items ul li{
+        height: 42px;
+    }
     .image{
         
         width: 100%;
