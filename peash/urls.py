@@ -6,5 +6,4 @@ urlpatterns = [
     path('',Home,name='home_page'),
     path('resume/download/',download_resume,name="download_resume"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-urlpatterns+=static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
