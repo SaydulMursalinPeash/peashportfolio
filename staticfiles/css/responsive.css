@@ -24,7 +24,7 @@
     #home{
         width: 100%;
         max-height: 100vh;
-        min-height: 100vh;
+        min-height: 98vh;
         border-radius: 0px;
         position: relative;
         display:flex;
@@ -33,14 +33,14 @@
         justify-content: center;
         margin-bottom: 0;
         background-color: rgba(207, 206, 206, 0.144);
-        background-image: linear-gradient(to bottom, #0303038c, transparent);
+        background-image: linear-gradient(to bottom, #0303038c,75%, transparent);
 
     }
     .menu_items ul li{
         height: 35px;
     }
     .image{
-        
+        position: relative;
         width: 100%;
         display: flex;
         justify-content: end;
@@ -50,20 +50,31 @@
         right: -50px;
         bottom:-50px;
     }
+    .image_inner{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
     
     .project_text .project_name h2{
-        font-size: 17px;
+        font-size: 15px;
     }
     .project_description p{
         font-size: 15px;
     }
-    .about_text{
+    #home .about_text{
         background-color: transparent;
         background-image: none;
         border-radius: 0px;
+        
+        height: fit-content;
+        margin-top: 150px;
     }
-    .about_text h1{
-        font-size: 20px;
+    #home .about_text h1{
+        font-size: 16px;
+    }
+    #home .about_text h1 p{
+        font-size: 16px;
     }
     .about_text .description_text{
         font-size: 15px;

@@ -223,7 +223,7 @@
             .image_inner img {
                 height: 100%; /* Change height to 100% */
                 width: auto; /* Set width to auto for responsive scaling */
-                opacity: 65%;
+                opacity: 100%;
             }
             .about_text {
                 position: relative;
@@ -699,7 +699,7 @@
             
              .menu{
                 position: absolute;
-                bottom: 30px;
+                bottom: 50px;
                 right: 10;
                 height: 50px;
                 width: 50px;
