@@ -1,0 +1,99 @@
+#skills{
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: rgb(1, 2, 3);
+    border-radius: 0px;
+}
+.all_skills{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+.skill{
+    position: relative;
+    width: 49.7%;
+    height: 150px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 80px auto;
+    background-color: rgba(0, 0, 0, 0.39);
+    grid-gap: 5px;
+    margin-bottom: 7px;
+    border-radius: 10px;
+}
+.skill_name p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(107, 172, 230);
+    position: relative;
+    font-size: 20px;
+
+    width: fit-content;
+    margin-bottom: 5px;
+}
+.skill_description p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+    text-align: center;
+    font-size: 17px;
+}
+.skill_image{
+    position: relative;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.171);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.skill_image img{
+    position: relative;
+    height:60px;
+    width: 60px;
+    background-color: rgba(240, 255, 255, 0.514);
+    border-radius: 5px;
+}
+.skill_texts{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.level{
+    position:absolute;
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    background-color: rgba(43, 165, 221, 0.445);
+    border-radius: 0px 0px 0px 0px;
+}
+.level_text{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}

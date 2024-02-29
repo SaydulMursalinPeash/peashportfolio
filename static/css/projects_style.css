@@ -1,0 +1,225 @@
+#projects{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    
+    border-radius: 0px;
+    background-color: black;
+    margin-bottom: 5px;
+    
+}
+.title_div{
+    position: relative;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    height: 50px;
+    border-radius: 1px;
+    
+
+}
+.title_div p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(216, 240, 255, 0.842);
+    font-size: 20px;
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    letter-spacing: 5px;
+}
+.all_projects{
+    position: relative;
+    width: 100%;
+    
+    border-radius: 10px;
+    overflow: hidden;
+}
+.project{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 400px auto;
+    
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    
+    
+}
+.project .project_image {
+    height: 400px;
+    width: 400px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: rgba(40, 144, 235, 0.24);
+    background-image: linear-gradient(to right,#0303038c,transparent);
+}
+.project .project_image img{
+    height: 400px;
+    width: 400px;
+    
+}
+.project .project_image img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.project_image .project_catagory{
+    position: absolute;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    border-radius: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(206, 206, 206, 0.623);
+}
+.project_text{
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s;
+    background-color: rgb(24, 24, 24);
+}
+
+.project_text .project_name{
+    position: relative;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    text-wrap: wrap;
+}
+.project_name h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(107, 172, 230);
+
+}
+.project_text.active .project_name h2{
+    font-size: 22px;
+    border-bottom: 1px solid rgba(238, 255, 139, 0.87);
+}
+.project_description{
+    position: absolute;
+    right: -1000px;
+    width: 100%;
+    padding-right: 15px;
+    background-color: rgba(219, 238, 255, 0.082);
+    padding: 10px;
+    border-radius: 5px;
+    
+
+}
+.project_description.active{
+    position: relative;
+    right: 0;
+    transition: all 0.5s;
+}
+.project_description p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.479);
+    text-wrap: wrap;
+    text-align: justify;
+    font-size: 17px;
+    
+}
+#sdb{
+    position: relative;
+    height: 40px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(43, 137, 226, 0.315);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(245, 105, 105);
+    font-size: 20px;
+}
+#sdb:hover{
+    background-color: brown;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: aliceblue;
+}
+.short_description{
+    position: relative;
+    width: 80%;
+    text-align: center;
+    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(240, 248, 255, 0.733);
+}
+#sdb.active{
+    display: none;
+}
+.project_text.active{
+    align-items: start;
+    justify-content: start;
+    transition: all 0.5s;
+    background-color: transparent;
+    background-image: linear-gradient(to right,black,transparent);
+}
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 43, 43, 0.863);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Style for the modal image */
+.modal-container img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    background-color: #ffffffc4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 99999;
+}
+

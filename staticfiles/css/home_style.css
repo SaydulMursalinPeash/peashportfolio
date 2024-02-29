@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@900;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.856);
+                
+               
+            }
+            .container{
+                height: 99vh;
+                width:1300px;
+               
+                border-radius: 15px;
+                display: grid;
+                grid-template-columns: 300px auto;
+                grid-auto-rows: 1fr;
+                overflow: hidden;
+                grid-gap: 0.5px;
+                box-shadow: 1px 0px 30px rgba(0, 0, 0, 0.51);
+                backdrop-filter: blur(5px);  
+                z-index: 0;
+
+            }
+            .side_bar{
+                background: linear-gradient(to right bottom,rgba(255, 255, 255, 0),transparent);
+                position:relative;
+                overflow: hidden;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                flex-direction: column;
+                border-radius: 15px;
+            }
+            .main_cont{
+                background: linear-gradient(to left top,rgba(255, 255, 255, 0),transparent);
+                position: relative;
+                padding: 5px;
+                display: flex;
+                
+                overflow-y: scroll;
+                border-radius: 15px;
+                flex-direction: column;
+
+            }
+            .image_cont{
+                position: relative;
+                height: 200px;
+                width: 200px;
+                border-radius: 100px;
+                background-image: linear-gradient(to right bottom, rgba(10, 10, 10, 0.582), rgba(230, 230, 230, 0.342));
+                margin-top: 10px;
+            }
+            .image_cont img{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+            }
+            .links{
+                position: absolute;
+                width: 250px;
+                bottom: 0;
+                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+            .links .link{
+                position: relative;
+                height: fit-content;
+                width: fit-content;
+                overflow: hidden;
+                border-radius: 50%;
+                margin: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(250, 250, 250, 0.096);
+                border: 0.5px solid rgba(255, 255, 255, 0.815);
+                
+            }
+            .links .link a{
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .links .link a img{
+                position: relative;
+                height: 60%;
+                width: 60%;
+
+            }
+            .links .link a:hover{
+                background-color: rgba(0, 0, 0, 0.425);
+                transform: scale(1.3);
+                transition: all 0.3s;
+            }
+            .name{
+                position: relative;
+                max-width: 250px;
+                margin-top: 10px;
+                margin-bottom:0px;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 25px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.808);
+            }
+            .name i{
+                color: rgb(245, 169, 169);
+            }
+            .contract{
+                display: flex;
+                align-items: center;
+                width: 250px;
+               
+                justify-content: center;
+
+            }
+            .contract .contract_icon{
+                height: 28px;
+                width: 28px;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 50%;
+                margin-right: 2px;
+            }
+            .contract_icon i{
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(238, 238, 238);
+            }
+            .contract .contract_text{
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 14px;
+                text-wrap: wrap;
+                color: rgb(228, 228, 228);
+            }
+            .back_ball{
+                position: absolute;
+            }
+            #ball_1{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                background-color: rgb(42, 99, 165);
+                top: 50%;
+                right: 20%;
+            }
+            #ball_2{
+                height: 400px;
+                width: 400px;
+                border-radius: 30%;
+                background-color: rgb(100, 163, 236);
+                top: 30%;
+                right: 50%;
+                transform: rotateZ(45deg);
+            }
+            #ball_3{
+                height: 300px;
+                width: 300px;
+                
+                background-color: rgb(218, 147, 235);
+                top: 5%;
+                right: 30%;
+                
+                clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+            }

@@ -1,0 +1,390 @@
+{% load static %}
+<html>
+    <head>
+        <title>Saydul Mursalin Peash</title>
+        <link rel="stylesheet" href="{% static 'css/all_css.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f6f279d9a4.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/all_js.js' %}"></script>
+        
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="side_bar">
+                <div class="image_cont">
+                    <img src="{{ about.pro_img.url }}">
+                </div>
+                <div class="name">
+                    <p class="name_text">{{ about.name }}</p>
+                </div>
+                <div class="contract">
+                    <div class="contract_icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <p class="contract_text">saydulpeash428@gmail.com</p>
+                </div>
+                <div class="contract">
+                    <div class="contract_icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <p class="contract_text">+8801726922753</p>
+                </div>
+                
+                <div class="links">
+                    {% for link in links %}
+                    <div class="link">
+                        <a href="{{ link.link_address }}" target="blank">
+                            <img src="{{ link.link_icon.url }}" alt="">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+            <div class="main_cont">
+                
+                <div id="home">
+                    <div class="my_logo">
+                        <p>peash</p>
+                    </div>
+                    <div class="about_text">
+                        <h1>Hello! <br>I am Peash</h1>
+                        <p class="description_text">{{ about.short_des }}</p>
+                    </div>
+                    <div class="image">
+                        <div class="image_inner">
+                            <img src="{{ about.canv_img.url }}">
+                        </div>
+                        <div class="c">
+                            <div class="cc">
+                                {% for type in types %}
+                                <div class="c1">
+                                    <a href="#{{ type.link }}" style="display: block; width: 100%; height: 100%;position:absolute;"></a>
+                                    <img src="{{ type.icon.url }}">
+                                    <div class="c1_text">
+                                        <p>
+                                            {{ type.name }}
+                                        </p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--Education-->
+                <div id="about_me">
+                    <div class="title_div">
+                        <p>
+                             ABOUT ME
+                        </p>
+                    </div>
+                    
+                    <div class="all_about">
+                        <div class="about_all_text">
+                            <p>
+                                {{ about.des }}
+                            </p>
+                        </div>
+                        <div class="education">
+                            <div class="edu_title">
+                                <div class="dot"></div>
+                                <p>EDUCATION</p>
+                            </div>
+                            <div class="edu_details">
+                                {% for edu in edus %}
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="{{ edu.logo.url }}">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>{{ edu.name }}</p>
+                                            <div class="edu_dur">
+                                                <p>{{ edu.year }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>{{ edu.edu_from }}</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                {%  endfor %}
+                                
+
+                            </div>
+                        </div>
+                        <!--Ext-->
+                        <div class="education">
+                            <div class="edu_title">
+                                <div class="dot"></div>
+                                <p>EXTRACURRICULAR ACTIVITIES</p>
+                            </div>
+                            <div class="edu_details">
+                                {% for extra in extras %}
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="{{ extra.logo.url }}">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>{{ extra.post_name }}</p>
+                                            <div class="edu_dur">
+                                                <p>{{ extra.year }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>{{ extra.org_name }}</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+                <!--End education-->
+                
+                <!--start skills-->
+                <div id="skills">
+                    <div class="title_div">
+                        <p>
+                             TECHNICAL SKILLS
+                        </p>
+                    </div>
+                    <div class="all_skills">
+                        <!--skill-->
+                        {% for skill in skills %}
+                        <div class="skill">
+                            <div class="skill_image">
+                                <div class="level" style="height: {{ skill.level }};">
+                                    <div class="level_text">
+                                        <p>{{ skill.level }}</p>
+                                    </div>
+                                </div>
+                                <img src="{{ skill.skill_icon.url }}">
+                            </div>
+                            <div class="skill_texts">
+                                <div class="skill_name">
+                                    <p>{{ skill.skill_name }}</p>
+                                </div>
+                                <div class="skill_description">
+                                    <p>{{ skill.skill_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!--skill-->
+                    </div> 
+                </div>
+                
+                <div id="projects">
+                    <div class="title_div">
+                        <p>
+                            PROJECTS 
+                        </p>
+                    </div>
+                    <div class="all_projects">
+                        {% for type in types %}
+                            <div id="{{ type.link }}">
+                                {% for project in projects %}
+                                    {% if type.name == project.project_type.name %}
+                                        <div class="project">
+                                            <div class="project_image">
+                                                <div class="project_catagory">
+                                                    <p>{{ type.name }}</p>
+                                                </div>
+                                                <img id="img" src="{{ project.icon.url }}" alt="">
+                                            </div>
+                                            <div class="project_text">
+                                                <div class="project_name">
+                                                    <h2>{{ project.project_name }}</h2>
+                                                </div>
+                                                <div class="short_description">
+                                                    <p>{{ project.short_description }}</p>
+                                                </div>
+                                                <div class="show_description_button">
+                                                    <button id="sdb">Show details</button>
+                                                </div>
+                                                <div class="project_description">
+                                                    <p>{{ project.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                        
+                </div>
+                
+                <div id="experiences">
+                    <div class="title_div">
+                        <p>
+                            EXPERIENCES 
+                        </p>
+                    </div>
+                    <div class="all_exp">
+                        <!--Experience-->
+                        {% for experience in experiences %}
+                        <div class="exp">
+                            <div class="exp_texts">
+                                <div class="exp_name">
+                                    <p>{{ experience.name }}</p>
+                                </div>
+                                <div class="exp_additional">
+                                    <div class="exp_type">
+                                        <p>{{ experience.type }}</p>
+                                    </div>
+                                    <div class="exp_year">{{ experience.duration }}</div>
+                                </div>
+                                <div class="exp_details">
+                                    <p>{{ experience.description }}</p>
+                                </div>
+                            </div>
+                            <div class="exp_image">
+                                <img src="{{ experience.image.url }}" id="img">
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!--Experience end-->
+                    </div>
+                </div>
+                <div id="achivements">
+                    <div class="title_div">
+                        <p>
+                            ACHIVEMENTS
+                        </p>
+                    </div>
+                    <div class="all_achivements">
+                        <!--Achivement-->
+                        {% for achievement in achievements %}
+                        <div class="achivement">
+                            <div class="ach_image">
+                                <img src="{{ achievement.image.url }}" id="img">
+                            </div>
+                            <div class="ach_field">{{ achievement.name }}</div>
+                            <div class="ach_texts">
+                                <div class="ach_name">
+                                    <p>{{ achievement.name }}</p>
+                                </div>
+                                <div class="ach_additionals">
+                                    <div class="ach_from">
+                                        <p>{{ achievement.ach_from }}</p>
+                                    </div>
+                                    <div class="ach_year">
+                                        <p>{{ achievement.year }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!--Achivement-->
+                        
+                    </div>
+                </div>
+                <!--Footer-->
+            <div id="contacts">
+                <div class="title_div">
+                    <p>
+                        CONTACT ME
+                    </p>
+                </div>
+                <div class="contact_div">
+                    <div class="cont_info">
+                        <div class="con2">
+                            <div class="contract_icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <p class="contract_text">saydulpeash428@gmail.com</p>
+                        </div>
+                        <div class="con2">
+                            <div class="contract_icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <p class="contract_text">+8801726922753</p>
+                        </div>
+                        <div class="cv_download">
+                            <a href="{% url 'download_resume' %}">
+                                <i class="fa-solid fa-download"></i>
+                                <p>DOWNLOAD CV</p>
+                            </a>
+                        </div>
+                        <div class="social">
+                            {% for link in links %}
+                            <div class="link">
+                                <a href="{{ link.link_address }}" target="blank">
+                                    <img src="{{ link.link_icon.url }}" alt="">
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="cont_form">
+                        <form action="/submit_contact_form/" method="post">
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <textarea id="msg" name="msg" placeholder="Message" required></textarea>
+                
+                            <button type="submit">SEND ME</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Footer-->
+            
+            <div class="cop">&copy; 2024 Saydul Mursalin Peash. All rights reserved.</div>
+            
+            </div>
+            
+            <div class="menu" id="menu">
+                
+                <div class="menu_items">
+                    <ul class="menu-list">
+                        <li class="m"><a href="#home">
+                            Home
+                        </a></li>
+                        <li class="m"><a href="#about_me">
+                            About Me
+                        </a></li>
+                        <li class="m"><a href="#skills">
+                            Technical Skills
+                        </a></li>
+                        <li class="m"><a href="#projects">
+                            Projects
+                        </a></li>
+                        
+                        <li class="m"><a href="#experiences">
+                            Experiences
+                        </a></li>
+                        <li class="m"><a href="#achivements">
+                            Achivements
+                        </a></li>
+                        <li class="m"><a href="#contacts">
+                            Contact
+                        </a></li>
+                        
+                    </ul>
+                </div>
+                <div class="menu_icon" id="menu_icon_id">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>

@@ -1,0 +1,720 @@
+{% load static %}
+<html>
+    <head>
+        <title>Saydul Mursalin Peash</title>
+        <link rel="stylesheet" href="{% static 'css/achivements_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/menu_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/skills_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/experience_style.css' %}">
+       
+        <link rel="stylesheet" href="{% static 'css/achivements_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/projects_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/scroll_style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f6f279d9a4.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/home_script.js' %}"></script>
+        <script src="{% static 'js/round.js' %}"></script>
+        <script src="{% static 'js/project_des.js' %}"></script>
+        <script src="{% static 'js/achivements_scroll.js' %}"></script>
+        <style>
+            
+            
+            .c1:hover{
+                transform: scale(1.1);
+                transition: all 0.3s;
+                cursor: pointer;
+                z-index: 10;
+            }
+            .c1:hover .c1_text{
+                width: fit-content;
+                transition: all 0.5s;
+                overflow: visible;
+                transform: scale(1);
+                background-color:#FFF;
+                color: #000000;
+                z-index:11;
+            }
+            .c1:hover .c1_text p{
+                color:#000;
+            }
+            #skills{
+                position: relative;
+                width: 100%;
+                margin-bottom: 5px;
+                background-color: rgb(1, 2, 3);
+                border-radius: 0px;
+            }
+            .all_skills{
+                position: relative;
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                overflow: hidden;
+                padding:5px;
+                background-color: rgba(0, 0, 0, 0.070);
+            }
+            .skill{
+                position: relative;
+                width: 49.7%;
+                min-height: 120px;
+                height:fit-content;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 80px auto;
+                background-color: rgba(0, 0, 0, 0.39);
+                grid-gap: 5px;
+                margin-bottom: 7px;
+                border-radius: 10px;
+                border:1px solid rgba(255,255,255,0.1);
+                box-sizing:border-box;
+            }
+            .skill:hover{
+                background-color:rgba(255,255,255,0.1);
+                cursor:pointer;
+                transition:all 0.3s;
+            }
+            .skill_name p{
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+                color: rgb(107, 172, 230);
+                position: relative;
+                font-size: 20px;
+            
+                width: fit-content;
+                margin-bottom: 5px;
+            }
+            .skill_description p{
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                color: rgba(255,255,255,0.5);
+                text-align: center;
+                font-size: 16px;
+            }
+            .skill_image{
+                position: relative;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.15);
+                display: flex;
+                justify-content: center;
+                padding-top: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .skill_image img{
+                position: relative;
+                height:60px;
+                width: 60px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 5px;
+            }
+            .skill_texts{
+                height: 100%;
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                flex-direction: column;
+            }
+            .level{
+                position:absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: rgba(43, 165, 221, 0.445);
+                border-radius: 0px 0px 0px 0px;
+            }
+            .level_text{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 18px;
+                color: rgb(255, 255, 255);
+                padding: 5px;
+            }
+            .skill_image{
+                position:relative;
+            }
+            .project_name h2{
+                text-align:center;
+            }
+            .main_cont{
+                overflow-y: scroll;
+                display: flex;
+                flex-direction: column;
+            }
+            #home{
+                position: relative;
+                background-color: rgba(114, 155, 243, 0.397);
+                border-radius: 15px 15px 0px 0px;
+                min-height: 400px; /* Change height to min-height */
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 5px;
+                box-sizing: border-box;
+            }
+            
+            .image {
+                position: relative;
+                height: 100%; /* Change height to 100% */
+                width: 50%; /* Set width to 50% */
+            }
+            .image_inner {
+                position: absolute;
+                right: -85px;
+                bottom: -85;
+            }
+            .image_inner img {
+                height: 100%; /* Change height to 100% */
+                width: auto; /* Set width to auto for responsive scaling */
+                opacity: 65%;
+            }
+            .about_text {
+                position: relative;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                background-image: linear-gradient(to right, #0303038c, transparent);
+                padding: 50px;
+                z-index: 1; /* Ensure text is above the image */
+            }
+            
+            #home .about_text h1{
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+                color: rgba(248, 252, 255, 0.842);
+                font-style: italic;
+            }
+            .description_text{
+                position: relative;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 14px;
+                color: rgba(223, 223, 223, 0.575);
+                margin-top: 5px;
+            }
+            .c {
+                height: 400px; /* Change height to 100% */
+                width: 400px; /* Change width to 100% */
+                position: absolute;
+                bottom: -55;
+                right: -70;
+                z-index: 5;
+                border-radius: 50%;
+                border: 5px solid rgba(255, 255, 255, 0.39);
+            }
+            .image .c .cc{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                
+            }
+            .cc .c1{
+                height: 50px;
+                width: 50px;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                flex-direction: row-reverse;
+                padding-right: 2.5px;
+                background-color: rgba(112, 133, 151, 0.377);
+                position: absolute;
+                border: 3px solid rgb(255, 242, 242);
+            }
+            .cc .c1 img{
+                height: 40px;
+                width: 40px;
+                
+            }
+            .cc .c1 .c1_text{
+                
+                height: 50px;
+                width: max-content;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 25px;
+                border: 2px solid rgba(255, 255, 255, 0.411);
+                margin-right: 5px;
+                background-color: rgba(0, 0, 0, 0.479);
+                transform: scale(0);
+                
+                
+            }
+            .cc .c1 .c1_text p{
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                color: aliceblue;
+                font-size: 15px;
+                
+            }
+            
+        </style>
+        <script>
+            {
+                document.addEventListener('DOMContentLoaded', function (){
+                let c1=document.querySelectorAll('.c1');
+                l=c1.length
+                const container = document.querySelector('.cc');
+                console.log(c1)
+                const numSubDivs = l; // Change this to adjust the number of sub-divs
+                const radius =200 ; // Adjust the radius as needed
+                let offset=25;
+                let init_ang=Math.PI/2;
+                const angle = (Math.PI/6)*5/(numSubDivs);
+                for (let i = 0; i < numSubDivs; i++) {
+                    
+                    let x=0;
+                    let y=0;
+                    
+                    console.log(init_ang);
+                    if(init_ang>Math.PI/2&&init_ang<=Math.PI){
+                        console.log('11');
+                        x=-Math.round(radius*Math.sin(init_ang-Math.PI/2))+radius-offset;
+                        y=Math.round(radius*Math.cos(init_ang-Math.PI/2))+radius-offset;
+                    }
+                    else if(init_ang>Math.PI&&init_ang<=3*Math.PI/2){
+                        console.log('22');
+                        x=-Math.round(radius*Math.cos(init_ang-Math.PI))+radius-offset;
+                        y=-Math.round(radius*Math.sin(init_ang-Math.PI))+radius-offset;
+                    }else if(init_ang>3*Math.PI/2&&init_ang<=Math.PI*2){
+                        console.log('33');
+                        x=Math.round(radius*Math.sin(init_ang-3*Math.PI/2))+radius-offset;
+                        y=-Math.round(radius*Math.cos(init_ang-3*Math.PI/2))+radius-offset;
+                    }
+                    else{
+                        x=Math.round(radius*Math.cos(init_ang))+radius-offset;
+                        y=Math.round(radius*Math.sin(init_ang))+radius-offset;
+                    }
+                    subDiv=c1[i];
+                    console.log(`${x} ${y}`);
+                    subDiv.style.left = `${x}px`;
+                    subDiv.style.bottom = `${y}px`;
+                    init_ang+=angle;
+                    
+                }
+                } )
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="side_bar">
+                <div class="image_cont">
+                    <img src="{{ about.pro_img.url }}">
+                </div>
+                <div class="name">
+                    <p class="name_text">{{ about.name }}</p>
+                </div>
+                <div class="contract">
+                    <div class="contract_icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <p class="contract_text">saydulpeash428@gmail.com</p>
+                </div>
+                <div class="contract">
+                    <div class="contract_icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <p class="contract_text">+8801726922753</p>
+                </div>
+                
+                <div class="links">
+                    {% for link in links %}
+                    <div class="link">
+                        <a href="{{ link.link_address }}" target="blank">
+                            <img src="{{ link.link_icon.url }}" alt="">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+            <div class="main_cont">
+                <div id="home">
+                    <div class="about_text">
+                        <h1>Hello! <br>I am Peash</h1>
+                        <p class="description_text">{{ about.short_des }}</p>
+                    </div>
+                    <div class="image">
+                        <div class="image_inner">
+                            <img src="{{ about.canv_img.url }}">
+                        </div>
+                        <div class="c">
+                            <div class="cc">
+                                {% for type in types %}
+                                <div class="c1">
+                                    <a href="#{{ type.link }}" style="display: block; width: 100%; height: 100%;position:absolute;"></a>
+                                    <img src="{{ type.icon.url }}">
+                                    <div class="c1_text">
+                                        <p>
+                                            {{ type.name }}
+                                        </p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--About-->
+                <div id="about_me">
+                    <div class="title_div">
+                        <p>
+                             ABOUT ME
+                        </p>
+                    </div>
+                    
+                    <div class="all_about">
+                        <div class="about_all_text">
+                            <p>
+                                I am goal oriented and dedicated towards work. I have the ability to work under pressure and meet deadlines of the project. I want to build up a respectable and sustainable career in any reputed organization where I can be able to explore & utilize my competence.
+                            </p>
+                        </div>
+                        <div class="education">
+                            <div class="edu_title">
+                                <div class="dot"></div>
+                                <p>EDUCATION</p>
+                            </div>
+                            <div class="edu_details">
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="ruet_logo.png">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>BSc in Mechatronics Engineering</p>
+                                            <div class="edu_dur">
+                                                <p>2019-2024</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Rajshahi University of Engineering & Technology(RUET),Rajshahi, Bangladesh.</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="aldc.jpg">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>Higher Secondary School Certificate(HSC)</p>
+                                            <div class="edu_dur">
+                                                <p>2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Amrita Lal Dey College, Barisal, Bangladesh</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="sonamoddin.jpg">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>Secondary School Certificate(SSC)</p>
+                                            <div class="edu_dur">
+                                                <p>2015</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Sonamoddin Mridha Secondary School, Bauphal, Patuakhali, Bangladesh</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Ext-->
+                        <div class="education">
+                            <div class="edu_title">
+                                <div class="dot"></div>
+                                <p>EXTRACURRICULAR ACTIVITIES</p>
+                            </div>
+                            <div class="edu_details">
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="rsr-removebg-preview.png">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>Joint Technical Secretary(Software)</p>
+                                            <div class="edu_dur">
+                                                <p>2023-2024</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Robotic Societ of RUET</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="rsr-removebg-preview.png">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>Assistant Technical Secretary(Software)</p>
+                                            <div class="edu_dur">
+                                                <p>2022-2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Robotic Societ of RUET</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="durbar.jpg">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>Member(Android Development Team)</p>
+                                            <div class="edu_dur">
+                                                <p>2021-2022</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Durbar Kandari</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="edu_card">
+                                    <div class="edu_logo">
+                                        <img src="innovation_society_of_ruet_logo.jpg">
+                                    </div>
+                                    <div class="ed">
+                                        <div class="name_edu">
+                                            <p>Executive Member</p>
+                                            <div class="edu_dur">
+                                                <p>2022-2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="edu_from">
+                                            <p>Innovation Society of RUET (ISR)</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+                <!--About-->
+                
+                <!--start skills-->
+                <div id="skills">
+                    <div class="title_div">
+                        <p>
+                             TECHNICAL SKILLS
+                        </p>
+                    </div>
+                    <div class="all_skills">
+                        <!--skill-->
+                        {% for skill in skills %}
+                        <div class="skill">
+                            <div class="skill_image">
+                                <div class="level" style="height: {{ skill.level }};">
+                                    <div class="level_text">
+                                        <p>{{ skill.level }}</p>
+                                    </div>
+                                </div>
+                                <img src="{{ skill.skill_icon.url }}">
+                            </div>
+                            <div class="skill_texts">
+                                <div class="skill_name">
+                                    <p>{{ skill.skill_name }}</p>
+                                </div>
+                                <div class="skill_description">
+                                    <p>{{ skill.skill_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <!--skill-->
+                    </div> 
+                </div>
+                
+                <div id="projects">
+                    <div class="title_div">
+                        <p>
+                            PROJECTS 
+                        </p>
+                    </div>
+                    <div class="all_projects">
+                        {% for type in types %}
+                            <div id="{{ type.link }}">
+                                {% for project in projects %}
+                                    {% if type.name == project.project_type.name %}
+                                        <div class="project">
+                                            <div class="project_image">
+                                                <div class="project_catagory">
+                                                    <p>{{ type.name }}</p>
+                                                </div>
+                                                <img id="img" src="{{ project.icon.url }}" alt="">
+                                            </div>
+                                            <div class="project_text">
+                                                <div class="project_name">
+                                                    <h2>{{ project.project_name }}</h2>
+                                                </div>
+                                                <div class="short_description">
+                                                    <p>{{ project.short_description }}</p>
+                                                </div>
+                                                <div class="show_description_button">
+                                                    <button id="sdb">Show details</button>
+                                                </div>
+                                                <div class="project_description">
+                                                    <p>{{ project.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                        
+                </div>
+                
+                <div id="experiences">
+                    <div class="title_div">
+                        <p>
+                            EXPERIENCES 
+                        </p>
+                    </div>
+                    <div class="all_exp">
+                        <!--Experience-->
+                        {% for experience in experiences %}
+                        <div class="exp">
+                            <div class="exp_texts">
+                                <div class="exp_name">
+                                    <p>{{ experience.name }}</p>
+                                </div>
+                                <div class="exp_additional">
+                                    <div class="exp_type">
+                                        <p>{{ experience.type }}</p>
+                                    </div>
+                                    <div class="exp_year">{{ experience.duration }}</div>
+                                </div>
+                                <div class="exp_details">
+                                    <p>{{ experience.description }}</p>
+                                </div>
+                            </div>
+                            <div class="exp_image">
+                                <img src="{{ experience.image.url }}" id="img">
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!--Experience end-->
+                    </div>
+                </div>
+                <div id="achivements">
+                    <div class="title_div">
+                        <p>
+                            ACHIVEMENTS
+                        </p>
+                    </div>
+                    <div class="all_achivements">
+                        <!--Achivement-->
+                        {% for achievement in achievements %}
+                        <div class="achivement">
+                            <div class="ach_image">
+                                <img src="{{ achievement.image.url }}" id="img">
+                            </div>
+                            <div class="ach_field">{{ achievement.name }}</div>
+                            <div class="ach_texts">
+                                <div class="ach_name">
+                                    <p>{{ achievement.name }}</p>
+                                </div>
+                                <div class="ach_additionals">
+                                    <div class="ach_from">
+                                        <p>{{ achievement.ach_from }}</p>
+                                    </div>
+                                    <div class="ach_year">
+                                        <p>{{ achievement.year }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!--Achivement-->
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                
+                <div class="menu_items">
+                    <ul class="menu-list">
+                        <li class="m"><a href="#about_me">
+                            About Me
+                        </a></li>
+                        <li class="m"><a href="#skills">
+                            Technical Skills
+                        </a></li>
+                        <li class="m"><a href="#projects">
+                            Projects
+                        </a></li>
+                        
+                        <li class="m"><a href="#experiences">
+                            Experiences
+                        </a></li>
+                        <li class="m"><a href="#achivements">
+                            Achivements
+                        </a></li>
+                        
+                    </ul>
+                </div>
+                <div class="menu_icon" id="menu_icon_id">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    
+</html>

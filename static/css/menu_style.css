@@ -1,0 +1,77 @@
+.menu{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 20px;
+
+    
+}
+.menu_items{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transform: translateX(250px);
+    
+    
+}
+
+.menu_items ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+
+}
+.menu_items ul li{
+    position: relative;
+    margin-bottom: 5px;
+    height: 35px;
+    background-image: linear-gradient(to right bottom,rgb(125, 103, 255), rgb(204, 124, 236) );
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: end;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    transform: translateX(250px);
+}
+.menu_items ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.menu_icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to left top,rgb(103, 207, 255), rgb(25, 85, 163) );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+.menu_icon i{
+    font-size: 30px;
+    color: aliceblue;
+}
+.menu_icon:hover{
+    transform: scale(1.1);
+    background-image: linear-gradient(to right bottom,rgb(167, 116, 233), rgb(31, 163, 252) );
+    
+    
+}
+.menu_items ul li:hover{
+    background-image: linear-gradient(to left top,rgb(255, 159, 103), rgb(231, 79, 91) );
+    transition: all 0.5s;
+    transform: scale(1.1);
+
+}
