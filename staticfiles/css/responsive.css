@@ -50,12 +50,7 @@
         right: -50px;
         bottom:-50px;
     }
-    .image_inner{
-        height: 100%;
-        width: 100%;
-        position: relative;
-    }
-    
+   
     .project_text .project_name h2{
         font-size: 15px;
     }
@@ -68,16 +63,16 @@
         border-radius: 0px;
         
         height: fit-content;
-        margin-top: 150px;
+        margin-top: 100px;
     }
     #home .about_text h1{
-        font-size: 16px;
+        font-size: 17px;
     }
     #home .about_text h1 p{
-        font-size: 16px;
+        font-size: 17px;
     }
     .about_text .description_text{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 400px;
     }
     .edu_details{
