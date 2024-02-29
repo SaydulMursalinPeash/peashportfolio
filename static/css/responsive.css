@@ -131,6 +131,38 @@
         padding: 10px;
         width: 100%;
     }
+    .project_text .project_name h2{
+        font-size: 17px;
+    }
+    .project_text .short_description{
+        font-size: 14px;
+    }
+    .project_text.active .project_name h2{
+        font-size: 17px;
+    }
+    #sdb{
+        font-size: 16px;
+        height: 35px;
+
+    }
+    .edu_title p{
+        font-size: 15px;
+    }
+    .title_div p{
+        font-size: 16px;
+    }
+    .exp_texts .exp_name{
+        font-size: 17px;
+    }
+    .exp_type{
+        font-size: 16px;
+    }
+    .exp_year{
+        font-size: 15px;
+    }
+    .exp_details{
+        font-size: 14px;
+    }
     .exp{
         display: flex;
         flex-direction: column-reverse;

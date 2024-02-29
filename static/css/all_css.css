@@ -334,7 +334,7 @@
             }
             .education{
             position: relative;
-            padding: 10px;
+            padding: 0px;
             }
             .dot{
                 position: relative;
@@ -397,7 +397,7 @@
             }
             .edu_details{
                 position: relative;
-                
+                width: 100%;
                 padding: 15px;
                 display: flex;
                 flex-wrap: wrap;
@@ -413,7 +413,9 @@
             }
             .name_edu{
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
             }
             .name_edu p{
                 color: rgb(62, 149, 224);
@@ -436,13 +438,10 @@
                 font-optical-sizing: auto;
                 font-weight: 500;
                 font-style: normal;
-                font-size: 15px;
+                font-size: 16px;
                 color: chocolate;
             }
-            .edu_dur p{
-                text-align: end;
-                width: 80px;
-            }
+            
             .edu_card:hover{
                 background-color: rgba(255, 255, 255, 0.13);
                 cursor: pointer;
@@ -781,14 +780,14 @@
                 border-radius: 10px;
                 overflow: hidden;
                 background-color: rgba(0, 0, 0, 0.637);
-                padding: 20px;
+                padding: 15px;
             }
             .skill{
                 position: relative;
                 width: 49.7%;
                 min-height: 150px;
                 height: fit-content;
-                padding: 10px;
+                padding: 00px;
                 display: grid;
                 grid-template-columns: 80px auto;
                 background-color: rgba(0, 0, 0, 0.39);
@@ -807,7 +806,7 @@
                 font-optical-sizing: auto;
                 font-weight: 700;
                 font-style: normal;
-                color: rgb(107, 172, 230);
+                color: rgb(62, 149, 224);
                 position: relative;
                 font-size: 20px;
             
@@ -1003,7 +1002,7 @@
                 font-optical-sizing: auto;
                 font-weight: 600;
                 font-style: normal;
-                color: rgb(107, 172, 230);
+                color: rgb(62, 149, 224);
                 position: relative;
                 width: 100%;
                 text-align: center;
@@ -1012,7 +1011,7 @@
             .project_text.active .project_name h2{
                 font-size: 22px;
                 text-align: start;
-                border-bottom: 1px solid rgba(238, 255, 139, 0.87);
+                
             }
             .project_description{
                 position: absolute;
