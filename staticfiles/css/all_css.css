@@ -386,7 +386,7 @@
                 display: grid;
                 grid-template-columns: 60px auto;
                 background-color: black;
-                border-radius: 5px;
+                border-radius: 10px;
                 overflow: hidden;
                 padding: 10px;
                 border: 0.5px solid rgba(138, 138, 138, 0.144);
@@ -401,7 +401,7 @@
                 opacity: 100%;
                 display: flex;
                 align-items: center;
-                border-radius: 5px;
+                border-radius: 7px;
                 overflow: hidden;
                 
                 background-color: rgba(255, 255, 255, 0.842);
