@@ -50,6 +50,9 @@
         right: -50px;
         bottom:-50px;
     }
+    .image .image_inner img{
+        height: 70vh;
+    }
    
     .project_text .project_name h2{
         font-size: 15px;

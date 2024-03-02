@@ -59,13 +59,17 @@
                 height: 150px;
                 width: 150px;
                 border-radius: 75px;
-                background-image: linear-gradient(to right bottom, rgba(10, 10, 10, 0.582), rgba(230, 230, 230, 0.342));
+                background-image: linear-gradient(to right bottom, rgba(64, 149, 218, 0.842),50%,rgba(250, 250, 250, 0));
                 margin-top: 10px;
+                overflow: hidden;
             }
             .image_cont img{
-                height: 150px;
+                height:auto;
                 width: 150px;
-                border-radius: 50%;
+                border-radius: 5px;
+                position: absolute;
+                top: 0;
+                transform: scale(1);
             }
             .links{
                 position: absolute;
@@ -217,13 +221,14 @@
             }
             .image_inner {
                 position: absolute;
-                right: -85px;
-                bottom: -85;
+                right: -65px;
+                bottom: -35px;
+                
             }
             .image_inner img {
-                height: 100%; /* Change height to 100% */
+                height: 50vh; /* Change height to 100% */
                 width: auto; /* Set width to auto for responsive scaling */
-                opacity: 100%;
+                opacity: 80%;
             }
             .about_text {
                 position: relative;
@@ -384,7 +389,7 @@
                 border-radius: 5px;
                 overflow: hidden;
                 padding: 10px;
-                border: 0.5px solid rgba(138, 138, 138, 0.288);
+                border: 0.5px solid rgba(138, 138, 138, 0.144);
                 margin-bottom: 5px;
                 
             }
