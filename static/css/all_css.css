@@ -203,7 +203,8 @@
             }
             #home {
                 position: relative;
-                background-color: rgba(114, 155, 243, 0.397);
+                /*background-color: rgba(114, 155, 243, 0.397);*/
+                background-color: rgba(2, 89, 146, 0.562);
                 border-radius: 0px 15px 0px 0px;
                 min-height: 400px; /* Change height to min-height */
                 display: flex;
@@ -308,6 +309,7 @@
                 position: relative;
                 height: 35px;
                 width: 45px;
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -318,6 +320,9 @@
                 position: absolute;
                 height: 45px;
                 width: 45px;
+                z-index: 11;
+                border-radius: 15px;
+                
             }
             .cc .c1 img{
                 height: 35px;
@@ -1008,6 +1013,8 @@
                 border-radius: 5px;
                 overflow: hidden;
                 margin-bottom: 5px;
+                background-color: rgba(219, 238, 255, 0.082);
+                overflow: hidden;
                 
                 
             }
@@ -1018,14 +1025,14 @@
                 justify-content: center;
                 overflow: hidden;
                 align-items: center;
-                border-radius: 10px 0px 0px 10px;
+                border-radius: 5px 5px 5px 5px;
                 background-color: rgba(40, 144, 235, 0.24);
                 background-image: linear-gradient(to right,#0303038c,transparent);
             }
             .project .project_image img{
                 height: 250px;
                 width: auto;
-                border-radius: 10px 0px 0px 10px;
+                border-radius: 5px 0px 0px 5px;
                 
             }
             .project .project_image img:hover{
@@ -1060,7 +1067,7 @@
                 justify-content: center;
                 flex-direction: column;
                 transition: all 0.5s;
-                background-color: rgb(24, 24, 24);
+                
             }
             
             .project_text .project_name{
@@ -1084,7 +1091,43 @@
                 width: 100%;
                 text-align: center;
                 font-size: 16px;
+                padding-top: 10px;
             
+            }
+            .ext_images{
+                position: relative;
+                width: fit-content;
+                max-width: 100%;
+                height: fit-content;
+                
+                display: flex;
+                align-items: center;
+                justify-content:space-between;
+                flex-wrap: wrap;
+                overflow: hidden;
+                
+                margin-top: 10px;
+                border-radius: 5px;
+                
+            }
+            .ext_images .ext_img{
+                position: relative;
+                height: 70px;
+                width: auto;
+                overflow: hidden;
+                margin: 2px;
+                border-radius: 5px;
+            }
+            .ext_images .ext_img img{
+                position: relative;
+                height: 100%;
+            }
+            .project_cross .show_description_button{
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: end;
+                margin-top: 8px;
             }
             .project_text.active .project_name h2{
                 font-size: 16px;
@@ -1096,9 +1139,12 @@
                 right: -1000px;
                 width: 100%;
                 padding-right: 15px;
-                background-color: rgba(219, 238, 255, 0.082);
+                
                 padding: 10px;
                 border-radius: 5px;
+                
+                background-color: #ffffff10;
+                border: 1px solid rgba(255, 255, 255, 0.082);
                 
             
             }
@@ -1118,7 +1164,56 @@
                 font-size: 14px;
                 
             }
-            #sdb{
+            .project_text .repos{
+                position: relative;
+                width: fit-content;
+                max-width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                height: fit-content;
+                margin-bottom: 5px;
+                
+            }
+            .repos .repo{
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                background-color: #ffffffad;
+                margin: 7px;
+                margin-top: 12px;
+            }
+            .repo a{
+                position: absolute;
+                height: 35px;
+                width: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                border-radius: 50%;
+                
+
+            }
+            .repo:hover{
+                background-color: rgb(255, 255, 255);
+            }
+            .repo img{
+                position: relative;
+                height: 25px;
+                width: 25px;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .sdb{
                 position: relative;
                 height: 35px;
                 width: fit-content;
@@ -1136,7 +1231,7 @@
                 color: rgb(245, 105, 105);
                 font-size: 14px;
             }
-            #sdb:hover{
+            .sdb:hover{
                 background-color: brown;
                 transition: all 0.5s;
                 cursor: pointer;
@@ -1163,7 +1258,7 @@
                 justify-content: start;
                 transition: all 0.5s;
                 background-color: transparent;
-                background-image: linear-gradient(to right,black,transparent);
+                background-color: black;
             }
             .modal-container {
                 position: fixed;

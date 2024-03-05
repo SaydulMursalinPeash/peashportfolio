@@ -40,11 +40,28 @@ class Project(models.Model):
     project_type=models.ForeignKey(Type,on_delete=models.CASCADE,related_name="project_type")
     short_description=models.TextField(max_length=500,null=False,blank=False)
     description=models.TextField(max_length=2000,null=False,blank=False)
-    icon=models.ImageField(null=False,blank=False,upload_to='projects/')
+    icon=models.ImageField(null=False,blank=False,upload_to='projects/',default='projects/default.png')
     year=models.CharField(max_length=50,null=False,blank=False)
     def __str__(self):
         return '('+self.project_type.name+') '+self.project_name
-
+    
+class RepoDest(models.Model):
+    name=models.CharField(max_length=100)
+    icon=models.ImageField(upload_to='links/',null=True)
+    def __str__(self):
+        return self.name
+class Repo(models.Model):
+    repo_dest=models.ForeignKey(RepoDest,on_delete=models.CASCADE,related_name='repo_dest_repo')
+    project=models.ForeignKey(Project,on_delete=models.CASCADE,related_name='repo_project')
+    link=models.URLField(null=False,blank=False)
+    
+    def __str__(self):
+        return self.project.project_name + ' ('+self.repo_dest.name+') '
+class ExtraImage(models.Model):
+    project=models.ForeignKey(Project,on_delete=models.CASCADE,related_name='image_project',null=True)
+    image=models.ImageField(upload_to='projects/',null=True)
+    def __str__(self):
+        return self.project.project_name+'('+str(self.id)+')'
 class Achivement(models.Model):
     name=models.CharField(max_length=200,null=False,blank=False)
     ach_from=models.CharField(max_length=200)

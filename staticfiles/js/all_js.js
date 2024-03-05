@@ -136,6 +136,7 @@
     {
         document.addEventListener('DOMContentLoaded', function (){
             let pdb=document.querySelectorAll('#sdb');
+            let sdb1=document.querySelectorAll('#sdb1')
             let project_text=document.querySelectorAll('.project_text');
             let short_description=document.querySelectorAll('.short_description');
             console.log(pdb);
@@ -148,6 +149,17 @@
                     pdb[i].classList.toggle('active');
                     short_description[i].style.display='none'
                     project_text[i].classList.toggle('active');
+                })
+            });
+            sdb1.forEach((db,i)=>{
+                console.log(i);
+                sdb1[i].addEventListener('click',(e)=>{
+                    //console.log('hdufvdyf')
+                    description_text[i].classList.remove('active');
+                    sdb1[i].classList.toggle('active');
+                    pdb[i].classList.remove('active');
+                    short_description[i].style.display='flex'
+                    project_text[i].classList.remove('active');
                 })
             });
             

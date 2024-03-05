@@ -206,10 +206,39 @@
                                                     <p>{{ project.short_description }}</p>
                                                 </div>
                                                 <div class="show_description_button">
-                                                    <button id="sdb">Show details</button>
+                                                    <button id="sdb" class="sdb">Show details</button>
                                                 </div>
                                                 <div class="project_description">
                                                     <p>{{ project.description }}</p>
+                                                    {% if extra_images|length > 0 %}
+                                                    <div class="ext_images">
+                                                        {% for ext_img in extra_images %}
+                                                        
+                                                        {% if ext_img.project.project_name == project.project_name %}
+                                                        <div class="ext_img">
+                                                            <img id="img" src="{{ ext_img.image.url }}">
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                    {% endif %}
+                                                    <div class="project_cross">
+                                                        <div class="show_description_button">
+                                                            <button id="sdb1" class='sdb'>Show less</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="repos">
+                                                    {% for repo in project.repo_project.all %}
+                                                        
+                                                        <div class="repo">
+                                                            <img src="{{ repo.repo_dest.icon.url }}">
+                                                            <a href="{{ repo.link }}" target="blank">
+                                                                
+                                                            </a>
+                                                        </div>
+                                                       
+                                                    {% endfor %}
                                                 </div>
                                             </div>
                                         </div>

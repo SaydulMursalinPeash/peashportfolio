@@ -16,6 +16,8 @@ def Home(request):
     achievements=list(Achivement.objects.all())
     educations=list(Education.objects.all())
     extras=list(Extracurricular.objects.all())
+    extra_images=list(ExtraImage.objects.all())
+    #print(extra_images)
     context={
         'links':links,
         'about':about,
@@ -25,7 +27,8 @@ def Home(request):
         'experiences':experiences,
         'achievements':achievements,
         'edus':educations,
-        'extras':extras
+        'extras':extras,
+        'extra_images':extra_images
     }
     return render(request,'peash/home.html',context)
 
