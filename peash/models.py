@@ -62,6 +62,13 @@ class ExtraImage(models.Model):
     image=models.ImageField(upload_to='projects/',null=True)
     def __str__(self):
         return self.project.project_name+'('+str(self.id)+')'
+    
+class Tool(models.Model):
+    name=models.CharField(max_length=150)
+    project=models.ForeignKey(Project,on_delete=models.CASCADE,related_name='tool_project')
+    def __str__(self):
+        return self.name+' ('+self.project.project_name +')'
+
 class Achivement(models.Model):
     name=models.CharField(max_length=200,null=False,blank=False)
     ach_from=models.CharField(max_length=200)

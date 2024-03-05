@@ -209,7 +209,16 @@
                                                     <button id="sdb" class="sdb">Show details</button>
                                                 </div>
                                                 <div class="project_description">
+                                                    
                                                     <p>{{ project.description }}</p>
+                                                    <div class="project_tools">
+                                                        {% for tool in project.tool_project.all %}
+                                                        <div class="tool">
+                                                            <p>{{ tool.name }}</p>
+
+                                                        </div>
+                                                        {% endfor %}
+                                                    </div>
                                                     {% if extra_images|length > 0 %}
                                                     <div class="ext_images">
                                                         {% for ext_img in extra_images %}
@@ -221,6 +230,7 @@
                                                         {% endif %}
                                                         {% endfor %}
                                                     </div>
+                                                    
                                                     {% endif %}
                                                     <div class="project_cross">
                                                         <div class="show_description_button">

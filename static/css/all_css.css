@@ -1040,6 +1040,40 @@
                 transform: scale(1.2);
                 transition: all 0.5s;
             }
+            .project_tools{
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                border-radius: 5px;
+                width: fit-content;
+                
+                margin-bottom: 5px;
+                
+            }
+            .project_tools .tool{
+                height: 30px;
+                width: fit-content;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+                border: 1px solid rgba(221, 221, 221, 0.356);
+                margin: 3px;
+                margin-top: 5px;
+                font-size: 13px;
+            }
+            .tool:hover{
+                background-color: #78787954;
+                cursor: pointer;
+                transition: all 0.3s;
+                color: #0763af;
+            }
+            
+            .project_tools .tool p{
+                color: #e7e7e760;
+            }
             .project_image .project_catagory{
                 position: absolute;
                 height: 35px;
