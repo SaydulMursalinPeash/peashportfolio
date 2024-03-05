@@ -221,7 +221,7 @@
             }
             .image_inner {
                 position: absolute;
-                right: -65px;
+                right: -85px;
                 bottom: -35px;
                 
             }
@@ -273,11 +273,16 @@
                 height: 400px; /* Change height to 100% */
                 width: 400px; /* Change width to 100% */
                 position: absolute;
-                bottom: -55;
-                right: -70;
+                bottom: -45;
+                right: -90;
                 z-index: 5;
                 border-radius: 50%;
                 border: 3px solid rgba(255, 255, 255, 0.199);
+            }
+            .c>img{
+                position: absolute;
+                bottom:-10px;
+                right: -10px;
             }
             .image .c .cc{
                 position: relative;
@@ -290,17 +295,37 @@
                 width: 45px;
                 border-radius: 15px;
                 display: flex;
-                align-items: center;
+                
                 justify-content: end;
                 flex-direction: row-reverse;
-                padding-right: 2.5px;
+                
                 background-color: rgba(112, 133, 151, 0.377);
                 position: absolute;
                 border: 2px solid rgba(255, 242, 242, 0.514);
+                
+            }
+            .c1_logo{
+                position: relative;
+                height: 35px;
+                width: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2.5px;
+                margin-right: 2.5px;
+            }
+            .c1 a{
+                position: absolute;
+                height: 45px;
+                width: 45px;
             }
             .cc .c1 img{
                 height: 35px;
                 width: 35px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
             }
             .cc .c1 .c1_text{
@@ -725,8 +750,8 @@
                 position: absolute;
                 height: fit-content;
                 width: 0;
-                right: 15px; /* Adjust this value as needed */
-                bottom: 90px; /* Adjust this value as needed */
+                right: 10px; /* Adjust this value as needed */
+                bottom: 100px; /* Adjust this value as needed */
                 margin-bottom: 10px;
                 
             }
@@ -786,6 +811,10 @@
                 z-index: 3;
                 background-image: none;
                 background-color: transparent;
+            }
+            .menu_icon:hover{
+                cursor: pointer;
+                background-image: linear-gradient(to right bottom,rgb(167, 116, 233), rgb(31, 163, 252) );
             }
             .menu_icon i{
                 font-size: 26px;
@@ -983,15 +1012,20 @@
                 
             }
             .project .project_image {
-                height: 250px;
+                height: fit-content;
                 width: 250px;
-                border-radius: 15px 0px 0px 15px;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                align-items: center;
+                border-radius: 10px 0px 0px 10px;
                 background-color: rgba(40, 144, 235, 0.24);
                 background-image: linear-gradient(to right,#0303038c,transparent);
             }
             .project .project_image img{
                 height: 250px;
-                width: 250px;
+                width: auto;
+                border-radius: 10px 0px 0px 10px;
                 
             }
             .project .project_image img:hover{
@@ -1007,7 +1041,9 @@
                 justify-content: center;
                 padding-left: 15px;
                 padding-right: 15px;
-                
+                top: 10px;
+                left:10px;
+                z-index: 10;
                 border-radius: 15px;
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
@@ -1035,6 +1071,7 @@
                 display: flex;
                 align-items: center;
                 text-wrap: wrap;
+                margin-bottom: 5px;
                 
             }
             .project_name h2{
@@ -1116,6 +1153,7 @@
                 font-style: normal;
                 color: rgba(240, 248, 255, 0.733);
                 font-size: 14px;
+                z-index: 10;
             }
             #sdb.active{
                 display: none;
@@ -1228,6 +1266,7 @@
                 position: relative;
                 width: 100%;
                 background-color: black;
+                padding: 10px;
             }
             .all_achivements{
                 position: relative;
@@ -1245,6 +1284,7 @@
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
+                border-radius: 5px;
 
             }
             .ach_image{

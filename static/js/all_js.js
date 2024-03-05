@@ -131,6 +131,7 @@
     });
     
 }
+
 {
     {
         document.addEventListener('DOMContentLoaded', function (){
@@ -149,8 +150,7 @@
                     project_text[i].classList.toggle('active');
                 })
             });
-            // Get the image element
-    // Get the image element
+            
     const images = document.querySelectorAll('#img');
     console.log(images)
     images.forEach((image,i)=>{

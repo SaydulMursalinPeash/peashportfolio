@@ -1,4 +1,4 @@
-@media only screen and (max-width:450px){
+@media only screen and (max-width:800px){
     .side_bar{
         display: none;
     }
@@ -24,36 +24,39 @@
     #home{
         width: 100%;
         max-height: 100vh;
-        min-height: 98vh;
+        min-height: 100vh;
         border-radius: 0px;
         position: relative;
         display:flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         margin-bottom: 0;
-        background-color: rgba(207, 206, 206, 0.144);
-        background-image: linear-gradient(to bottom, #0303038c,75%, transparent);
+        background-color: rgba(0, 0, 0, 0.144);
+        background-image: linear-gradient(to bottom, #012c4e8c,75%, transparent);
 
     }
     .menu_items ul li{
         height: 35px;
     }
     .image{
-        position: relative;
+        position: absolute;
         width: 100%;
         display: flex;
         justify-content: end;
+        align-items: end;
         overflow: hidden;
         box-sizing: border-box;
         transform: scale(0.8);
-        right: -50px;
-        bottom:-50px;
+        right: 0px;
+        bottom:0px;
+        background-image: linear-gradient(to top,#000000,15%,transparent);
+        
     }
-    .image .image_inner img{
-        height: 70vh;
+    .image .c{
+        position: absolute;
+        bottom:-0px
     }
-   
     .project_text .project_name h2{
         font-size: 15px;
     }
@@ -134,18 +137,20 @@
         position: relative;
         height: 100%;
         width: 100%;
-        border-radius: 15px 15px 0px 0px;
+        border-radius: 10px 10px 0px 0px;
     }
     .project .project_image img{
         position: relative;
         height: 100%;
         width: 100%;
+        border-radius: 10px 10px 0px 0px;
         
     }
     .project_text{
         position: relative;
-        padding: 10px;
+        padding: 0px;
         width: 100%;
+        padding-bottom: 10px;
     }
     .project_text .project_name h2{
         font-size: 17px;
@@ -194,26 +199,44 @@
         margin-bottom: 5px;
     }
     .my_logo{
-        display: block;
+        display: flex;
         position: absolute;
         height: 50px;
-        top: 20px;
+        top: 10px;
         left: 0px;
-        
+        background-color: rgba(255, 255, 255, 0.089);
+        padding-right: 15px;
         margin-bottom: 50px;
+        align-items: center;
+        border-right: 20px solid #c4cbd11a;
+        overflow: hidden;
     }
     .my_logo p{
         height: 50px;
         font-family: "Kaushan Script", cursive;
         font-weight: 600;
         font-style: normal;
-        font-size: 28px;
-        color: rgb(250, 36, 36);
+        font-size: 26px;
+        color: #e7e7e7e0;
+        
         z-index: 5;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         margin-left: 30px;
+        display: flex;
+        align-items: center;
+        background-color: #c4cbd11a;
           
           
+    }
+    .my_logo:active p{
+        transform: scale(1.1);
+        transition: all 0.05s;
+
+    text-shadow: 1px 1px 1px #f31a1a,   /* Shadow to the bottom right */
+                 -1px -1px 1px #f31a1a, /* Shadow to the top left */
+                 -1px 1px 1px #f31a1a,  /* Shadow to the top right */
+                 1px -1px 1px #f31a1a;  /* Shadow to the bottom left */
+
     }
     .about_text{
         width: 100%;
