@@ -1427,7 +1427,7 @@
             .ach_image{
                 position: relative;
                 width: 100%;
-                max-height: 200px;
+                max-height: 180px;
             }
             .ach_image img{
                 position: relative;
