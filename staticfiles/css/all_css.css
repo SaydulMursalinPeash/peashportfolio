@@ -1427,6 +1427,7 @@
             .ach_image{
                 position: relative;
                 width: 100%;
+                max-height: 200px;
             }
             .ach_image img{
                 position: relative;
@@ -1486,9 +1487,10 @@
                 
             }
             .ach_from{
-                color: rgb(255, 200, 200);
+                color: rgb(235, 235, 235);
                 font-weight: 500;
                 font-size: 14px;
+                text-align: center;
             }
             .ach_year{
                 color: rgb(255, 174, 81);
