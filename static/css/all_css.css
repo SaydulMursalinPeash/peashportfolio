@@ -882,7 +882,7 @@
                 color: rgb(62, 149, 224);
                 position: relative;
                 font-size: 16px;
-            
+                text-align: center;
                 width: fit-content;
                 margin-bottom: 5px;
             }
@@ -898,19 +898,22 @@
             .skill_image{
                 position: relative;
                 width: 100%;
-                background-color: rgba(255, 255, 255, 0.171);
+                background-color: rgb(0, 0, 0);
                 display: flex;
                 justify-content: center;
                 padding-top: 10px;
                 border-radius: 10px;
                 overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.301);
             }
             .skill_image img{
                 position: relative;
-                height:60px;
-                width: 60px;
-                background-color: rgba(240, 255, 255, 0.514);
+                height:50px;
+                width: 50px;
+                background-color: rgba(0, 0, 0, 0.281);
                 border-radius: 5px;
+                padding: 5px;
+                border: 1px solid rgba(255, 255, 255, 0.356);
             }
             .skill_texts{
                 height: 100%;
@@ -920,13 +923,14 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                padding: 5px;
             }
             .level{
                 position:absolute;
                 bottom: 0;
                 height: 80%;
                 width: 100%;
-                background-color: rgb(4, 100, 145);
+                background-color: rgba(9, 100, 161, 0.212);
                 border-radius: 0px 0px 0px 0px;
             }
             .level_text{
@@ -1020,6 +1024,7 @@
             }
             .project .project_image {
                 height: fit-content;
+                max-height: 250px;
                 width: 250px;
                 display: flex;
                 justify-content: center;
@@ -1030,8 +1035,8 @@
                 background-image: linear-gradient(to right,#0303038c,transparent);
             }
             .project .project_image img{
-                height: 250px;
-                width: auto;
+                height: auto;
+                width: 250px;
                 border-radius: 5px 0px 0px 5px;
                 
             }
@@ -1283,6 +1288,9 @@
                 color: rgba(240, 248, 255, 0.733);
                 font-size: 14px;
                 z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             #sdb.active{
                 display: none;
@@ -1402,7 +1410,7 @@
                 width: 100%;
                 
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 2px;
             }
             .achivement{
@@ -1427,7 +1435,7 @@
             }
             .ach_texts{
                 position: absolute;
-                bottom: -1000px;
+                bottom: -100px;
                 width: 100%;
                 height: 50%;
                 display: flex;
@@ -1443,19 +1451,22 @@
             }
             .ach_field{
                 position: absolute;
-                top: 10;
-                right: 10;
+                top: 15px;
+                right: 5px;
+                max-width: 150px;
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 500;
+                font-weight: 600;
                 font-style: normal;
-                height: 40px;
+                height: fit-content;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 0px 15px 0px 15px;
-                background-color: rgba(0, 0, 0, 0.89);
-                color: rgb(24, 99, 170);
+                background-color: rgba(15, 114, 207, 0.89);
+                color: rgb(255, 255, 255);
+                font-size: 13px;
+                padding: 5px;
             
             }
             .ach_name{
@@ -1464,7 +1475,8 @@
                 font-weight: 600;
                 font-style: normal;
                 color: rgb(255, 255, 255);
-                font-size: 16px;
+                font-size: 15px;
+                text-align: center;
             }
             .ach_additionals{
                 width: 100%;
@@ -1476,11 +1488,13 @@
             .ach_from{
                 color: rgb(255, 200, 200);
                 font-weight: 500;
+                font-size: 14px;
             }
             .ach_year{
                 color: rgb(255, 174, 81);
                 font-weight: 700;
                 margin-left: 5px;
+                font-size: 14px;
             }
             .achivement:hover .ach_texts{
                 bottom: 0;
