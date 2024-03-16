@@ -438,7 +438,7 @@
                 border-radius: 10px;
                 overflow: hidden;
                 padding: 10px;
-                border: 0.5px solid rgba(138, 138, 138, 0.144);
+                border: 1px solid rgba(138, 138, 138, 0.24);
                 margin-bottom: 5px;
                max-width: 49.5%;
                min-width: 49.5%;
@@ -497,9 +497,9 @@
                 font-style: normal;
                 font-size: 16px;
                 width: fit-content;
-                color: rgba(235, 235, 235, 0.74);
+                color: rgba(70, 160, 243, 0.993);
                 text-align: center;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+                border-bottom: 0px solid rgba(255, 255, 255, 0.082);
                 padding-bottom: 5px;
             }
             .edu_from{
@@ -904,7 +904,7 @@
                 margin-bottom: 7px;
                 border-radius: 10px;
                 padding: 2px;
-                border: 1px solid rgba(255, 255, 255, 0.11);
+                border: 1px solid rgba(138, 138, 138, 0.24);
             }
             .skill:hover{
                 background-color: rgb(0, 0, 0);
@@ -926,7 +926,7 @@
                 width: 100%;
                 
                 margin-bottom: 10px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+                border-bottom: 0px solid rgba(255, 255, 255, 0.152);
                 padding-bottom: 5px;
                 
             }
