@@ -545,11 +545,12 @@
             .about_all_text p{
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 400;
+                font-weight: 500;
                 font-style: normal;
-                font-size: 16px;
-                color: rgba(255, 250, 181, 0.966);
+                font-size: 15px;
+                color: rgba(243, 243, 243, 0.74);
                 text-align: center;
+                word-spacing: 2px;
             }
             .my_logo{
                 display: none;
