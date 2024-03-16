@@ -896,13 +896,14 @@
                 width: 49.5%;
                 min-height: 150px;
                 height: fit-content;
-                padding: 5px;
+                
                 display: grid;
                 grid-template-columns: 70px auto;
                 background-color: rgba(0, 0, 0, 0.39);
                 grid-gap: 5px;
                 margin-bottom: 7px;
                 border-radius: 10px;
+                padding: 2px;
                 border: 1px solid rgba(255, 255, 255, 0.11);
             }
             .skill:hover{
@@ -916,9 +917,9 @@
             .skill_name p{
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 600;
+                font-weight: 500;
                 font-style: normal;
-                color: rgba(0, 106, 138, 0.801);
+                color: rgba(202, 202, 202, 0.993);
                 position: relative;
                 font-size: 16px;
                 text-align: center;
@@ -948,7 +949,9 @@
                 padding-top: 10px;
                 border-radius: 7px;
                 overflow: hidden;
-                border: 1px solid rgba(255, 255, 255, 0.082);
+                
+                border: 1px solid rgba(255, 255, 255, 0.233);
+                
             }
             .skill_image img{
                 position: relative;
@@ -957,7 +960,7 @@
                 background-color: rgba(0, 0, 0, 0.281);
                 border-radius: 5px;
                 padding: 5px;
-                border: 1px solid rgba(255, 255, 255, 0.164);
+                border: 1px solid rgba(255, 255, 255, 0.274);
             }
             .skill_texts{
                 height: 100%;
@@ -967,14 +970,14 @@
                 
                 
                 flex-direction: column;
-                padding: 5px;
+                padding: 10px;
             }
             .level{
                 position:absolute;
                 bottom: 0;
                 height: 80%;
                 width: 100%;
-                background-color: rgba(9, 100, 161, 0.212);
+                background-color: rgba(0, 42, 66, 0.493);
                 border-radius: 0px 0px 0px 0px;
             }
             .level_text{
@@ -1170,7 +1173,7 @@
                 font-optical-sizing: auto;
                 font-weight: 600;
                 font-style: normal;
-                color: rgb(62, 149, 224);
+                color: rgb(207, 207, 207);
                 position: relative;
                 width: 100%;
                 text-align: center;
@@ -1245,7 +1248,7 @@
                 color: rgba(255, 255, 255, 0.479);
                 text-wrap: wrap;
                 text-align: justify;
-                font-size: 14px;
+                font-size: 13px;
                 
             }
             .project_text .repos{
