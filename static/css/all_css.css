@@ -115,22 +115,23 @@
                 transition: all 0.3s;
             }
             .name_image{
-                border: 1px solid rgba(255, 255, 255, 0.377);
+                border: 3px solid rgba(0, 73, 116, 0.986);
                 
                 display: flex;
                 flex-flow: column;
                 align-items: center;
-                height: 250px;
+                height: 280px;
                 border-radius: 80px;
                 padding: 5px;
-                background-color: #052033f8;
+                background-color: #021933f8;
+                transition: all 0.3s;
                 margin-top: 50px;
             }
             .name_image:hover{
                 
                 cursor: pointer;
-                transition: all 0.3s;
-                transform: scale(1.2);
+                
+                transform: scale(1.1);
             }
             .name{
                 position: relative;
@@ -430,8 +431,7 @@
                 position: relative;
                 min-height: 100px;
                 height: fit-content;
-                width: 49.8%;
-                max-width: 49.8%;
+                
                 display: grid;
                 grid-template-columns: 60px auto;
                 background-color: black;
@@ -440,6 +440,8 @@
                 padding: 10px;
                 border: 0.5px solid rgba(138, 138, 138, 0.144);
                 margin-bottom: 5px;
+               max-width: 49.5%;
+               min-width: 49.5%;
                 
             }
             .edu_logo{
@@ -452,8 +454,9 @@
                 align-items: center;
                 border-radius: 7px;
                 overflow: hidden;
-                
-                background-color: rgba(255, 255, 255, 0.842);
+                border: 1px solid white;
+                background-color: rgba(255, 202, 123, 0.925);
+                opacity: 1;
                 
             }
             .edu_logo img{
@@ -466,6 +469,7 @@
                 width: 100%;
                 padding: 15px;
                 display: flex;
+                gap: 5px;
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
@@ -482,39 +486,50 @@
                 flex-direction: column;
                 position: relative;
                 width: 100%;
+                align-items: center;
+                justify-content: center;
             }
-            .name_edu p{
+            .name_edu>p{
                 color: Drgb(250, 36, 36);
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 600;
+                font-weight: 500;
                 font-style: normal;
                 font-size: 16px;
-                color: rgb(30, 102, 210);
+                width: fit-content;
+                color: rgba(235, 235, 235, 0.74);
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+                padding-bottom: 5px;
             }
             .edu_from{
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 400;
+                font-weight: 500;
                 font-style: normal;
                 font-size: 14px;
                 color: rgb(188, 188, 190);
+                text-align: center;
             }
             .edu_dur p{
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 600;
+                font-weight: 500;
                 font-style: normal;
                 font-size: 14px;
-                color: rgba(123, 176, 255, 0.966);
+                color: rgba(255, 202, 123, 0.74);
                 margin-bottom: 7px;
                 margin-top: 4px;
+                letter-spacing: 3px;
             }
             
             .edu_card:hover{
-                background-color: rgba(255, 255, 255, 0.13);
+                background-color: rgb(0, 0, 0);
                 cursor: pointer;
                 transition: all 0.3s;
+                box-shadow: 3px 0px 10px rgba(143, 143, 143, 0.185);
+                transform: scale(1.02);
+                z-index: 5;
             }
             .about_all_text{
                 position: relative;
@@ -873,37 +888,45 @@
                 overflow: hidden;
                 background-color: rgba(0, 0, 0, 0.637);
                 padding: 15px;
+                gap: 5px;
             }
             .skill{
                 position: relative;
-                width: 49.7%;
+                width: 49.5%;
                 min-height: 150px;
                 height: fit-content;
-                padding: 00px;
+                padding: 5px;
                 display: grid;
                 grid-template-columns: 70px auto;
                 background-color: rgba(0, 0, 0, 0.39);
                 grid-gap: 5px;
                 margin-bottom: 7px;
                 border-radius: 10px;
-                border: 1px solid rgba(255, 255, 255, 0.062);
+                border: 1px solid rgba(255, 255, 255, 0.11);
             }
             .skill:hover{
+                background-color: rgb(0, 0, 0);
                 cursor: pointer;
-                background-color: rgba(245, 245, 220, 0.055);
                 transition: all 0.3s;
+                box-shadow: 3px 0px 10px rgba(143, 143, 143, 0.185);
+                transform: scale(1.02);
+                z-index: 5;
             }
             .skill_name p{
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
                 font-weight: 600;
                 font-style: normal;
-                color: rgb(62, 149, 224);
+                color: rgba(0, 106, 138, 0.801);
                 position: relative;
                 font-size: 16px;
                 text-align: center;
-                width: fit-content;
-                margin-bottom: 5px;
+                width: 100%;
+                
+                margin-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+                padding-bottom: 5px;
+                
             }
             .skill_description p{
                 font-family: "Montserrat", sans-serif;
@@ -912,7 +935,8 @@
                 font-style: normal;
                 color: rgba(240, 248, 255, 0.61);
                 text-align: center;
-                font-size: 14px;
+                font-size: 13px;
+                word-spacing: 3px;
             }
             .skill_image{
                 position: relative;
@@ -921,9 +945,9 @@
                 display: flex;
                 justify-content: center;
                 padding-top: 10px;
-                border-radius: 10px;
+                border-radius: 7px;
                 overflow: hidden;
-                border: 1px solid rgba(255, 255, 255, 0.301);
+                border: 1px solid rgba(255, 255, 255, 0.082);
             }
             .skill_image img{
                 position: relative;
@@ -932,15 +956,15 @@
                 background-color: rgba(0, 0, 0, 0.281);
                 border-radius: 5px;
                 padding: 5px;
-                border: 1px solid rgba(255, 255, 255, 0.356);
+                border: 1px solid rgba(255, 255, 255, 0.164);
             }
             .skill_texts{
                 height: 100%;
                 position: relative;
                 width: 100%;
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                
+                
                 flex-direction: column;
                 padding: 5px;
             }

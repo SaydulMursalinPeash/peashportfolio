@@ -143,13 +143,13 @@
         position: relative;
         height: 100%;
         width: 100%;
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 5px 5px 5px 5px;
     }
     .project .project_image img{
         position: relative;
         height: 100%;
         width: 100%;
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 5px 5px 5px 5px;
         
     }
     .project_text{
